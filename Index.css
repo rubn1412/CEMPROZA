@@ -1,0 +1,622 @@
+/* --- Variables de Color (basadas en el diseño de la imagen) --- */
+:root {
+    --color-principal-verde:#00af9b; /* turquesa principal de los botones y links */
+    --color-principal-naranja:rgb(243, 100, 17); /* Naranja del botón EXPLORE NOW */
+    --texto-oscuro: #1F2937; /* Texto oscuro principal */
+    --texto-secundario: #4B5563; /* Texto secundario y descripciones */
+    --fondo-claro: #F9FAFB; /* Fondo de algunas secciones */
+    --header-height: 120px;
+    --logo-img-size: 80px; /* igual que Index.css */
+    --logo-font-size: 1.5rem;
+    --nav-link-font: 1rem;
+}
+/* --- Reset y Estilos Base --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--tahoma);
+    color: var(--texto-oscuro);
+    line-height: 1.6;
+    background-color: var(--white);
+    font-size: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: var(--texto-oscuro);
+}
+
+h1, h2, h3, h4 {
+    font-family: "Roboto Condensed", sans-serif;
+}
+h2{
+    color: #f36511d9;
+    text-align: center;
+    text-shadow: 2px 3px 6px rgba(34, 0, 0, 0.537);
+}
+/* Botones */
+.btn-principal {
+    background-color: var(--color-principal-naranja);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow: 2px 4px 9px rgba(243, 100, 17, 0.697);
+}
+
+.btn-pequeño-verde {
+    background-color: var(--color-principal-verde);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: 2px 4px 9px #00af9bad;
+}
+
+/* --- Header y Navegación --- */
+.envoltura-superior {
+    background-image: linear-gradient(400deg, #00af9b5d , rgba(243, 100, 17, 0.382));
+    overflow: hidden;
+    height: 100%;
+    margin: 0px;
+    margin-top: 100px;
+    padding: 0px 0px 0px 75px;
+
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* barra fija como en Index.css */
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(90deg, #00af9b , #000000);
+    z-index: 20; /* igual que Index.css */
+    width: 100%;
+    height: 101px; /* usar variable para consistencia */
+    padding: 0 1rem;
+}
+
+.logo-cemproza {
+    /* Tamaño fluido: mínimo 1rem, ideal basado en viewport, máximo 1.6rem */
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--fondo-claro);
+    display: block;
+    margin-left: 20%;
+}
+
+.logo-cemproza-img {
+    width: var(--logo-img-size);
+    height: calc(var(--logo-img-size) + 0px);
+    object-fit: contain;
+}
+.logo-cemproza h2{
+    color: white;
+}
+
+.nav-enlaces {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-right: 10%;
+}
+
+/* Label que actúa como botón hamburguesa (por defecto oculto en desktop) */
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--fondo-claro);
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+/* checkbox oculto que controla el menú en móviles */
+.nav-toggle-checkbox {
+    position: absolute;
+    left: -9999px;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.nav-enlaces a {
+    color:#00ffe1;
+    font-weight: 500;
+    /* tamaño fluido del texto de enlaces */
+    font-size: clamp(0.85rem, 1.6vw, var(--nav-link-font));
+    transition: all 0.1s ease-in-out 0.1s;
+}
+
+.nav-enlaces a:hover {
+    color: var(--color-principal-naranja);
+    background-color: rgba(243, 100, 17, 0.425);
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+.nav-enlaces .active {
+    color: var(--color-principal-naranja);
+}
+
+/* --- Sección Hero --- */
+#hero {
+    display: flex;
+    align-items: center;
+    position: relative;
+    min-height: 360px;
+}
+
+.hero-contenido {
+    flex: 1;
+    max-width: 50%;
+    z-index: 10;
+}
+
+.hero-contenido h3 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.hero-contenido .brand {
+    color: var(--color-principal-verde);
+}
+
+.imagen-hero {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    min-height: 360px;
+    background: url(imagenes/studiantes2.0.png) no-repeat bottom right / contain;
+}
+
+/* --- Sección Cursos Populares --- */
+#cursos-populares {
+    padding: 30px 0 80px;
+    text-align: center;
+}
+
+#cursos-populares h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.etiquetas-cursos {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.etiquetas-cursos .active {
+    background-color: var(--color-principal-verde);
+    color: white;
+    border-color: var(--color-principal-verde);
+}
+
+.regilla-de-cursos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 50px;
+    padding: 0 25px;
+}
+
+.tarjeta-de-cursos {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px #00af9bc7;
+    overflow: hidden;
+    text-align: left;
+}
+
+.imagen-tarjeta1 {
+    height: 180px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-image: url('imagenes/AsistenteFarmacia.jpeg'); 
+}
+.imagen-tarjeta2{
+    height: 180px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-image: url('imagenes/administrativo.jpeg'); 
+}
+.imagen-tarjeta3{
+    height: 180px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-image: url('imagenes/electroauto.avif'); 
+}
+.imagen-tarjeta4{
+    height: 180px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-image: url('imagenes/uñasbasico.jpg'); 
+}
+.imagen-tarjeta5{
+    height: 180px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-image: url('imagenes/cejas.jpg'); 
+}
+.imagen-tarjeta6{
+    height: 180px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-image: url('imagenes/asistentedental.jpeg'); 
+}
+
+.contenido-tarjeta {
+    padding: 20px;
+}
+
+.contenido-tarjeta h4 {
+    font-size: 1.4;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.contenido-tarjeta p {
+    font-size: 1.1rem;
+    color: var(--texto-secundario);
+    margin-bottom: 15px;
+}
+
+.pie-de-tarjeta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pie-de-tarjeta .price {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-principal-verde);
+}
+
+
+/* --- Sección de Categorías --- */
+#categorias {
+    padding: 80px 0;
+    text-align: center;
+    background-color: var(--fondo-claro);
+}
+
+#categorias h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.descripcion-categorias {
+    color: var(--texto-secundario);
+    margin-bottom: 50px;
+}
+
+.rejilla-de-categorias {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.tarjeta-de-categoria {
+    padding: 0px 0px 20px 0px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(243, 100, 17, 0.7);
+    width: 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+.imagenes-categorias1{
+    height: 180px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-image: url('imagenes/cosmetologia.jpg'); 
+}
+.imagenes-categorias2{
+    height: 180px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-image: url('imagenes/cocina.jpg'); 
+}
+.imagenes-categorias3{
+    height: 180px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-image: url('imagenes/marketing.jpeg'); 
+}
+.imagenes-categorias4{
+    height: 180px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-image: url('imagenes/refrigeracion-residencial2.jpg'); 
+}
+.imagenes-categorias5{
+    height: 180px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-image: url('imagenes/refrigeracion-automotriz.jpg'); 
+}
+
+
+.contenido-categorias{
+    padding: 20px;
+}
+
+.tarjeta-de-categoria h4 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.tarjeta-de-categoria p {
+    font-size: 1.1rem;
+    color: var(--texto-secundario);
+    margin-bottom: 25px;
+}
+
+
+/* --- Sección de Beneficios (ID Card) --- */
+#beneficios {
+    padding: 80px 10px;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.contenido-beneficios {
+    flex: 1;
+}
+
+.contenido-beneficios h2 {
+    font-size: 2.2rem;
+    margin-bottom: 100px;
+}
+
+.contenido-beneficios ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.contenido-beneficios li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    color: var(--texto-secundario);
+}
+
+.contenido-beneficios li i {
+    color: var(--color-principal-verde);
+    font-size: 1.2rem;
+    margin-right: 15px;
+    margin-top: 3px;
+}
+
+.imagen-tarjeta-beneficios {
+    flex: 1;
+    min-height: 400px;
+    background-color: #858585; /* Placeholder de color de fondo */
+    border-radius: 12px;
+    background: url('imagenes/Certificado.png') no-repeat center / contain; 
+}
+
+/* --- Sección de Capacitación del Personal (Staff Training) --- */
+#entrenadores {
+    padding: 80px 10px;
+    background-color: var(--fondo-claro);
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.contenido-capacitacion {
+    flex: 1;
+}
+
+.contenido-capacitacion h2 {
+    font-size: 2.2rem;
+    margin-bottom: 100px;
+}
+
+.contenido-capacitacion ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.contenido-capacitacion li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    color: var(--texto-secundario);
+}
+
+.contenido-capacitacion li i {
+    color: var(--color-principal-verde);
+    font-size: 1.2rem;
+    margin-right: 15px;
+    margin-top: 3px;
+}
+
+.imagen-capacitacion {
+    flex: 1;
+    min-height: 400px; 
+    background-color: #F9FAFB; 
+    border-radius: 12px;
+    background: url('imagenes/equipo.jpeg') no-repeat center / contain; 
+}
+footer {
+    background-color: black;
+    color: #00ffe1;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 5px 0;
+}
+/* --- Media Queries (Responsividad) --- */
+@media (max-width: 1100px) {
+    .imagen-hero {
+        width: 50%;
+    }
+}
+
+@media (max-width: 900px) {
+    #hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    .hero-contenido {
+        max-width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .imagen-hero {
+        position: relative;
+        width: 100%;
+        min-height: 400px;
+        background-position: center bottom;
+    }
+
+    #cursos-populares {
+        padding-top: 80px;
+    }
+
+    #beneficios {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .imagen-tarjeta-beneficios {
+        width: 100%;
+        min-height: 300px;
+    }
+
+    #entrenadores {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .imagen-capacitacion {
+        width: 100%;
+        min-height: 300px;
+    }
+
+    .contenido-capacitacion {
+        text-align: center;
+    }
+    .contenido-beneficios {
+        text-align: center;
+    }
+}
+@media (max-width: 872px) {
+    .logo-cemproza{
+        margin-left: 10%;
+    }
+}
+@media (max-width: 700px) {
+    .logo-cemproza{
+        padding: 0px 0px 30px 0px;
+        margin-left: 0%;
+    }
+    nav{
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 20px 12px;
+    }
+    
+    .nav-enlaces a {
+        font-size: 0.85em;
+        padding: 8px 10px;
+    }
+
+    /* mostrar label hamburguesa en tablets y móviles */
+    .nav-toggle {
+        padding: 10px 30px 40px 10px;
+        display: flex;
+        justify-content: end;
+    }
+
+    .nav-enlaces {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 0 20px 0;
+        background: linear-gradient(90deg, rgba(0,175,155,0.95), rgba(0,0,0,0.9));
+        box-shadow: 0px 30px 60px 0px #33305a94;
+    }
+
+    /* cuando el checkbox esté marcado, mostrar el menú */
+    .nav-toggle-checkbox:checked ~ .nav-enlaces {
+        display: flex;
+        margin-top: -20px;
+        flex-direction: column;
+        margin-left: 46px;
+        border-radius: 30px;
+    }
+    
+    .hero-contenido h3 {
+        font-size: 2.0rem;
+    }
+
+    .etiquetas-cursos {
+        flex-wrap: wrap;
+    }
+    .regilla-de-cursos{
+        padding:0 15px;
+    }
+}
+@media (max-width: 563px) {
+    nav {
+        flex-wrap: wrap;
+        gap: 0px;
+        justify-content: space-around;
+    }
+
+    .nav-hamburguesa-checkbox:checked ~ .nav-enlaces {
+        margin-top: -10px;
+    }
+    .imagen-hero{
+        margin-top: -120px;
+        margin-left: -60px;
+    }
+
+}
+@media (max-width: 500px) {
+    .imagen-hero{
+        margin-top: -160px;
+        margin-left: -60px;
+    }
+}

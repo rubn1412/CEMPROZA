@@ -1,0 +1,440 @@
+:root {
+    --primary-color: #00b4ab; /* Verde agua */
+    --secondary-color: #000000; /* Negro */
+    --accent-color: #ff7b00; /* Naranja */
+    --light-color: #ffffff; /* Blanco */
+    --text-color: #333333; /* Gris oscuro */
+    --header-height: 101px; /* igual que Index.css */
+    /* Variables para escala responsiva de la navegación */
+    --logo-img-size: 80px; /* igual que Index.css */
+    --logo-font-size: 1.5rem;
+    --nav-link-font: 1rem;
+}
+body {
+    font-family: var(--tahoma);
+    color: var(--text-color);
+    line-height: 1.6;
+    font-size: 20px;
+}
+h1, h2, h3, h4 {
+    font-family: "Roboto Condensed", sans-serif;
+    text-align: center;
+    text-shadow: 2px 3px 6px rgba(34, 0, 0, 0.537);
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* barra fija como en Index.css */
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(90deg, #00af9b , #000000);
+    z-index: 20; /* igual que Index.css */
+    width: 100%;
+    height: var(--header-height); /* usar variable para consistencia */
+    padding: 0 1rem;
+}
+
+.logo-cemproza {
+    /* Tamaño fluido: mínimo 1rem, ideal basado en viewport, máximo 1.6rem */
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--light-color);
+    display: block;
+    margin-left: 20%;
+}
+
+.logo-cemproza-img {
+    width: var(--logo-img-size);
+    height: calc(var(--logo-img-size) + 0px);
+    object-fit: contain;
+}
+
+
+.nav-enlaces {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-right: 10%;
+}
+
+/* Label que actúa como botón hamburguesa (por defecto oculto en desktop) */
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--light-color);
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+/* checkbox oculto que controla el menú en móviles */
+.nav-toggle-checkbox {
+    position: absolute;
+    left: -9999px;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.nav-enlaces a {
+    color:#00ffe1;
+    font-weight: 500;
+    /* tamaño fluido del texto de enlaces */
+    font-size: clamp(0.85rem, 1.6vw, var(--nav-link-font));
+    transition: all 0.1s ease-in-out 0.1s;
+}
+
+.nav-enlaces a:hover {
+    color: var(--accent-color);
+    background-color: rgba(243, 100, 17, 0.425);
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+.nav-enlaces .active {
+    color: var(--accent-color);
+}
+a{
+    text-decoration: none;
+}
+#hero {
+    background: linear-gradient(135deg, var(--light-color) 50%, #e0fff9 100%);
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+#hero > div {
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+}
+
+#hero h1 {
+    font-size: 3.5rem;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+#hero p:first-child {
+    font-weight: 600;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Recuadro de meta */
+#hero > div > div:last-child {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-weight: 500;
+    font-style: italic;
+    align-self: flex-start; /* Se alinea arriba en el grid */
+}
+
+/* --- 2. MISIÓN/VISIÓN/VALORES (#mision-vision) --- */
+#mision-vision {
+    background-color: var(--grey-bg);
+}
+
+#mision-vision > div {
+    grid-template-columns: 2fr 1fr;
+    align-items: flex-start;
+}
+
+#mision-vision article h2 {
+    color: var(--text-color);
+    font-size: 2.2rem;
+    text-align: left;
+    border-left: 5px solid var(--accent-color);
+    padding-left: 15px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+#mision-vision aside {
+    background-color: var(--light-color);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid var(--primary-color);
+}
+
+#mision-vision aside h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    text-align: center;
+    border-left: none;
+    padding-left: 0;
+}
+
+#mision-vision ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#mision-vision li {
+    padding-left: 25px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+#mision-vision li::before {
+    content: "●"; /* Usamos un círculo simple */
+    color: var(--accent-color);
+    font-size: 1rem;
+    line-height: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+/* --- 3. HISTORIA (#historia) --- */
+#historia > div {
+    grid-template-columns: 3fr 2fr;
+    align-items: stretch;
+}
+
+#historia h2 {
+    text-align: left;
+    color: var(--primary-color);
+    font-size: 2.2rem;
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+}
+
+#historia > div > div:first-child > div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#historia strong {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+/* Recuadro de impacto */
+#historia > div > div:last-child {
+    background-color: var(--grey-bg);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#historia > div > div:last-child p:last-child {
+    font-style: italic;
+    margin-top: 20px;
+    padding: 15px;
+    border-left: 4px solid var(--primary-color);
+    background-color: rgba(0, 180, 171, 0.1);
+    border-radius: 5px;
+}
+
+/* --- 4. EJES FORMATIVOS (#ejes) --- */
+#ejes {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+#ejes h2 {
+    color: var(--light-color);
+    margin-bottom: 10px;
+}
+
+#ejes > div > p {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+#ejes > div > div {
+    display: grid;
+    /* Diseño flexible: mínimo 200px por columna, máximo 5 columnas en escritorio */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+#ejes > div > div > div {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: var(--text-color);
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-bottom: 5px solid var(--accent-color);
+}
+
+#ejes > div > div > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+#ejes strong {
+    color: var(--accent-color);
+    font-size: 1.25rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* --- 5. CTA / BENEFICIOS (#beneficios) --- */
+#beneficios > div {
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    padding: 40px;
+    background-color: var(--grey-bg);
+    border-radius: 15px;
+}
+
+#beneficios h2 {
+    color: var(--text-color);
+    text-align: left;
+    font-size: 2.2rem;
+    border-left: 5px solid var(--accent-color);
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+#beneficios > div > div:first-child p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+#beneficios ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#beneficios li {
+    padding-left: 20px;
+    margin-bottom: 8px;
+    position: relative;
+    font-weight: 500;
+}
+
+#beneficios li::before {
+    content: "★";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: var(--secondary-color);
+    color: #00ffe1;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* ================================================================
+   MEDIA QUERIES (RESPONSIVIDAD)
+   ================================================================ */
+
+/* MOBILE / TABLET (Hasta 900px) */
+@media (max-width: 900px) {
+    
+    /* NAV MOBILE */
+    nav {
+        flex-wrap: wrap;
+        padding: 10px 12px;
+        height: auto;
+    }
+    
+    .logo-cemproza {
+        margin-left: 5px;
+    }
+    
+    .nav-enlaces {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 0;
+        background: linear-gradient(90deg, rgba(0,175,155,0.95), rgba(0,0,0,0.9));
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    .nav-enlaces a {
+        width: 80%;
+        text-align: center;
+        font-size: 1.1rem;
+        padding: 10px;
+    }
+
+    /* Mostrar el botón hamburguesa */
+    .nav-toggle {
+        display: block;
+        background: transparent;
+        border: none;
+        color: var(--light-color);
+        font-size: 1.8rem;
+        cursor: pointer;
+        order: 2; /* Mueve el toggle a la derecha */
+    }
+
+    /* Toggle para mostrar el menú */
+    .nav-toggle-checkbox:checked ~ .nav-enlaces {
+        display: flex;
+    }
+
+    /* SECCIONES: Columnas a una sola fila */
+    #hero > div,
+    #mision-vision > div,
+    #historia > div,
+    #beneficios > div {
+        grid-template-columns: 1fr;
+    }
+    
+    .section {
+        padding: 40px 15px;
+    }
+
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    /* Separar los bloques en Hero */
+    #hero > div > div:last-child {
+        margin-top: 30px;
+    }
+    
+    #mision-vision aside {
+        margin-top: 30px;
+    }
+
+    /* Reducir espacio entre cards en Ejes */
+    #ejes > div > div {
+        gap: 15px;
+    }
+
+    #beneficios h2 {
+        margin-top: 20px;
+    }
+}
+
+/* MOBILE PEQUEÑO (Hasta 480px) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.2rem !important;
+    }
+    h2 {
+        font-size: 2.2rem;
+    }
+    body {
+        font-size: 16px;
+    }
+}

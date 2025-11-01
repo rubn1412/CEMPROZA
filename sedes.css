@@ -1,0 +1,363 @@
+:root {
+    --primary-color: #00b4ab; /* Verde agua */
+    --secondary-color: #000000; /* Negro */
+    --accent-color: #ff7b00; /* Naranja */
+    --light-color: #ffffff; /* Blanco */
+    --text-color: #333333; /* Gris oscuro */
+    --header-height: 101px; /* igual que Index.css */
+    /* Variables para escala responsiva de la navegación */
+    --logo-img-size: 80px; /* igual que Index.css */
+    --logo-font-size: 1.5rem;
+    --nav-link-font: 1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+    font-family: "Roboto Condensed", sans-serif;
+    text-align: center;
+    text-shadow: 2px 3px 6px rgba(34, 0, 0, 0.537);
+}
+
+body {
+    font-family: var(--tahoma);
+    color: var(--text-color);
+    line-height: 1.6;
+    font-size: 20px;
+}
+
+/* Estilos del header */
+/* Eliminar el header fijo separado: usamos `nav` como barra fija para evitar solapamientos */
+.main-header {
+    /* Mantener espacio visual si se usa en otras páginas */
+    width: 100%;
+    background: linear-gradient(90deg, var(--primary-color) 10%, var(--secondary-color) 100%);
+}
+
+/* Estilos de la navbar */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* barra fija como en Index.css */
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(90deg, #00af9b , #000000);
+    z-index: 20; /* igual que Index.css */
+    width: 100%;
+    height: var(--header-height); /* usar variable para consistencia */
+    padding: 0 1rem;
+}
+
+.logo-cemproza {
+    /* Tamaño fluido: mínimo 1rem, ideal basado en viewport, máximo 1.6rem */
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--light-color);
+    display: block;
+    margin-left: 20%;
+}
+
+.logo-cemproza-img {
+    width: var(--logo-img-size);
+    height: calc(var(--logo-img-size) + 0px);
+    object-fit: contain;
+}
+
+
+.nav-enlaces {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-right: 10%;
+}
+
+/* Label que actúa como botón hamburguesa (por defecto oculto en desktop) */
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--light-color);
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+/* checkbox oculto que controla el menú en móviles */
+.nav-toggle-checkbox {
+    position: absolute;
+    left: -9999px;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.nav-enlaces a {
+    color:#00ffe1;
+    font-weight: 500;
+    /* tamaño fluido del texto de enlaces */
+    font-size: clamp(0.85rem, 1.6vw, var(--nav-link-font));
+    transition: all 0.1s ease-in-out 0.1s;
+}
+
+.nav-enlaces a:hover {
+    color: var(--accent-color);
+    background-color: rgba(243, 100, 17, 0.425);
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+.nav-enlaces .active {
+    color: var(--accent-color);
+}
+
+/* ESTILOS DEL CONTENIDO PRINCIPAL (SEDES) */
+
+.headquarters-section {
+    padding: 10px 20px;
+    background-color:  #ededed;;
+    text-align: center;
+    scroll-margin-top: var(--header-height);
+}
+
+.headquarters-section h2 {
+    font-size: 2em;
+    color: var(--secondary-color);
+    margin: 0 0 30px 0;    
+    text-shadow: 2px 3px 6px rgba(34, 0, 0, 0.537);
+    padding-top: 30px;
+}
+
+.headquarter-card {
+    background: var(--light-color);
+    border-radius: 12px;
+    outline: rgba(78, 78, 78, 0.577) 2px solid;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 25px auto;
+    max-width: 1000px;
+    overflow: hidden;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.headquarter-card:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.headquarter-content {
+    display: flex;
+    padding: 25px;
+    gap: 25px;
+    height: 420px; /* Aumentada la altura para mejor distribución */
+}
+
+.headquarter-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.headquarter-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    object-fit: cover;
+    display: block;
+}
+
+.headquarter-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.headquarter-details h3 {
+    color: var(--accent-color);
+    margin-top: 0;
+    font-size: 1.8em;
+    text-align: center;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+    margin-bottom: 15px;
+}
+
+.address-line {
+    font-size: 19px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    color: #030303;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.map-container {
+    flex: 1; /* ✅ Ocupa el espacio restante */
+    height: 200px;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #ddd;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: none;
+}
+
+/* Recuadro Gris Inferior: Ubicación y Contacto */
+.headquarter-contact {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 15px;
+    gap: 38px;
+    transition: all 0.3s ease;
+}
+
+.headquarter-contact:hover {
+    background-color: #cccccc;
+    box-shadow: 0 6px 20px rgba(50, 50, 50, 0.4);
+}
+
+.headquarter-contact p {
+    margin: 8px 0;
+    color: #555;
+    font-size: 1.05em;
+}
+
+.headquarter-contact a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.headquarter-contact a:hover {
+    color: var(--secondary-color);
+}
+footer {
+    background-color: black;
+    color: #00ffe1;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* padding para el logo en desktop (como en Index.css) */
+@media (min-width: 900px) {
+    .logo-cemproza-img {
+        padding-left: 20px;
+        padding-top: 20px;
+    }
+}
+
+/* Media Query: Diseño responsivo para dispositivos pequeños */
+@media (max-width: 700px) {
+    .main-header {
+        height: 80px;
+    }
+    
+    .header-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .logo-cemproza{
+        padding: 0px 0px 30px 0px;
+        margin-left: 0%;
+    }
+    nav{
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 20px 12px;
+    }
+    
+    .nav-enlaces a {
+        font-size: 0.85em;
+        padding: 8px 10px;
+    }
+
+    /* mostrar label hamburguesa en tablets y móviles */
+    .nav-toggle {
+        padding: 10px 30px 40px 10px;
+        display: flex;
+        justify-content: end;
+    }
+
+    .nav-enlaces {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 0 20px 0;
+        background: linear-gradient(90deg, rgba(0,175,155,0.95), rgba(0,0,0,0.9));
+        box-shadow: 0px 30px 60px 0px #33305a94;
+    }
+
+    /* cuando el checkbox esté marcado, mostrar el menú */
+    .nav-toggle-checkbox:checked ~ .nav-enlaces {
+        display: flex;
+        margin-top: -20px;
+        flex-direction: column;
+        margin-left: 46px;
+        border-radius: 30px;
+    }
+    
+    .headquarter-content {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+        height: auto;
+    }
+    
+    .headquarter-image img {
+        min-height: 200px;
+    }
+    
+    .map-container {
+        height: 180px;
+        margin-top: 15px;
+    }
+}
+/* Asegurar que el contenido no quede oculto detrás del nav fijo */
+body {
+    padding-top: var(--header-height);
+}
+
+@media (max-width: 480px) {
+    .headquarter-content {
+        padding: 15px;
+    }
+    
+    .headquarter-details h3 {
+        font-size: 1.5em;
+    }
+    
+    .address-line {
+        font-size: 16px;
+    }
+    
+    .headquarter-contact {
+        padding: 12px 15px;
+    }
+    
+    .headquarter-contact p {
+        font-size: 0.95em;
+    }
+}

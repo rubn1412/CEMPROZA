@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Cursos</title>
+    <link rel="stylesheet" href="styloCursos.css">
+    <script src="arraycursos.js"></script>
+    <script src="javCursos.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+<header>
+        <nav>
+            <div>
+                <img src="imagenes/logo cemproza editable.png" alt="" class="logo-cemproza-img">
+            </div>
+            <div class="logo-cemproza"><h2>Cemproza</h2></div>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox" aria-hidden="true">
+            <label for="nav-toggle" class="nav-toggle" aria-label="Abrir menú">☰</label>
+            <ul class="nav-enlaces">
+                <li><a href="Index.html">Inicio</a></li>
+                <li><a href="cursos.html" class="active">Cursos</a></li>
+                <li><a href="Sedes.html">Sedes</a></li>
+                <li><a href="Nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="categories">
+            <button class="category-btn active">Todas las categorías</button>
+            <button class="category-btn">Belleza y Estética</button>
+            <button class="category-btn">Oficios Técnicos</button>
+            <button class="category-btn">Industria Automotriz</button>
+            <button class="category-btn">Artes Culinarias</button>
+            <button class="category-btn">Tecnologías Digitales</button>
+        </div>
+        
+        <div class="container">
+    <div class="categories">
+        </div>
+
+    <div class="course-grid">
+        </div>
+
+    <div class="pagination">
+        </div>
+</div>
+        
+    </div>
+<!-- Modal de Curso -->
+    <div id="courseModal" class="modal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal__close" type="button" aria-label="Cerrar" data-close>&times;</button>
+        <div class="modal__header">
+        <h3 id="modalTitle" class="modal__title"></h3>
+        <p class="modal__meta"></p>
+        </div>
+        <div class="modal__body">
+        <div class="modal__description"></div>
+        <h4 class="modal__subtitle">Sedes disponibles</h4>
+        <div class="modal__sedes" id="modalSedes"></div>
+        </div>
+    </div>
+    </div>
+
+    <footer role="contentinfo">
+        <div>
+            <p>©CEMPROZA — Centro de Formación para el Trabajo. Barquisimeto, Estado Lara.</p>
+            <p>Dirección principal: Carrera 32A, entre calles 41 y 42.</p>
+            <p>Mariposas Asesinas Derechos reservados</p>
+        </div>
+    </footer>
+</body>
+</html>
