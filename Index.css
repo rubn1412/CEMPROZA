@@ -595,7 +595,6 @@ footer p {
     }
 }
 @media (max-width: 563px) {
-    
     .nav-hamburguesa-checkbox:checked ~ .nav-enlaces {
         margin-top: -20px;
     }
@@ -611,5 +610,3 @@ footer p {
         margin-left: -20px;
     }
 }
-
-
