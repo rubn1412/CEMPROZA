@@ -258,15 +258,6 @@ footer {
 footer p {
     margin: 5px 0;
 }
-
-/* padding para el logo en desktop (como en Index.css) */
-@media (min-width: 900px) {
-    .logo-cemproza-img {
-        padding-left: 20px;
-        padding-top: 20px;
-    }
-}
-
 /* Media Query: Diseño responsivo para dispositivos pequeños */
 @media (max-width: 700px) {
     .main-header {
@@ -372,3 +363,4 @@ body {
         font-size: 0.95em;
     }
 }
+
