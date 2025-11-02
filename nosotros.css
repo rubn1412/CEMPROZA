@@ -1,6 +1,3 @@
-/* ---------------------------------------------------------------------------
-   VARIABLES & RESET (alineado con Index.css)
-   ------------------------------------------------------------------------ */
 :root{
    --color-principal-verde:#00af9b; /* turquesa */
    --color-principal-naranja:rgb(243,100,17);
@@ -170,23 +167,24 @@ nav{
    gap:18px;
    align-items:start
 }
-#mision-vision article{
-   background-image: linear-gradient(324deg, #00af9b5d , rgba(243, 100, 17, 0.382));
+.rejilla-mision-vision{
+   background-image: linear-gradient(324deg, #00af9b5d, rgba(243, 100, 17, 0.382));
+   padding: 16px;
+   border-radius: 7px;
    box-shadow: 6px 0px 15px #000000a3;
+   display: flex;
+   justify-content: center;
+   gap: 30px;
+   flex-wrap: wrap;
+   padding-bottom: 30px;
 }
-#mision-vision article h2{
-   color: var(--texto-oscuro);
-   padding-left: .75rem;
-   margin-bottom: .5rem;
-   font-size: 35px;
-}
-#mision-vision article p{
-   color:var(--texto-secundario);
-   line-height:1.7;
-   padding: 0 150px;
-   text-align:center;
-   font-size: 22px;
-   padding-bottom: 15px;
+.tarjeta-mision-vision{
+   border-radius: 12px;
+   box-shadow: 6px 0px 15px #000000a3;
+   width: 450px;
+   background-color: #fffefe43;
+   padding: 20px;
+   text-align: center;
 }
 #mision-vision aside{
    background-image: linear-gradient(135deg, #00af9b5d , rgba(243, 100, 17, 0.382));
@@ -220,9 +218,22 @@ nav{
 }
 .historia{
    background-image: linear-gradient(324deg, #00af9b5d , rgba(243, 100, 17, 0.382));
-   padding: 16px;
+   padding: 35px;
    border-radius: 7px;
    box-shadow: 6px 0px 15px #000000a3;
+}
+.rejilla-historia{
+   display: flex;
+   justify-content: center;
+   gap: 30px;
+   flex-wrap: wrap;
+}
+.tarjeta-historia{
+   border-radius: 12px;
+   box-shadow: 6px 0px 15px #000000a3;
+   width: 450px;
+   background-color: #fffefe43;
+   padding-bottom: 20px;
 }
 #historia > .container{
    display:grid;
@@ -235,23 +246,14 @@ nav{
    text-align: center;
    margin-top: 12px;
    font-size: 35px;
-   margin-bottom: 10px;
+   margin-bottom: 30px;
 }
 #historia p{
-   color:var(--texto-secundario);
-   line-height:1.7;
-   padding: 0 75px;
-   text-align:center;
+   color: var(--texto-secundario);
+   line-height: 1.7;
+   padding: 10px 40px;
+   text-align: center;
    font-size: 22px;
-   padding-bottom: 15px;
-}
-#historia .timeline{
-   display:flex;
-   flex-direction:column;
-   gap:.85rem
-}
-#historia strong{
-   font-weight:700
 }
 .impacto{
    background-image: linear-gradient(135deg, #00af9b5d , rgba(243, 100, 17, 0.382));
@@ -428,10 +430,3 @@ footer p{margin:5px 0}
       border-radius: 30px;
    }
 }
-
-@media (max-width:480px){
-   body{font-size:15px}
-   h1{font-size:1.4rem}
-   h2{font-size:2.1rem}
-}
-
