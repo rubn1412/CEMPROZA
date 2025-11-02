@@ -1,0 +1,265 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* barra fija como en Index.css */
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(90deg, #00af9b , #000000);
+    z-index: 20; /* igual que Index.css */
+    width: 100%;
+    height: var(--header-height); /* usar variable para consistencia */
+    padding: 0 1rem;
+}
+
+.logo-cemproza {
+    /* Tamaño fluido: mínimo 1rem, ideal basado en viewport, máximo 1.6rem */
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--light-color);
+    display: block;
+    margin-left: 20%;
+}
+
+.logo-cemproza-img {
+    width: var(--logo-img-size);
+    height: calc(var(--logo-img-size) + 0px);
+    object-fit: contain;
+}
+
+
+.nav-enlaces {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-right: 10%;
+}
+
+/* Label que actúa como botón hamburguesa (por defecto oculto en desktop) */
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--light-color);
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+/* checkbox oculto que controla el menú en móviles */
+.nav-toggle-checkbox {
+    position: absolute;
+    left: -9999px;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.nav-enlaces a {
+    color:#00ffe1;
+    font-weight: 500;
+    /* tamaño fluido del texto de enlaces */
+    font-size: clamp(0.85rem, 1.6vw, var(--nav-link-font));
+    transition: all 0.1s ease-in-out 0.1s;
+}
+
+.nav-enlaces a:hover {
+    color: var(--accent-color);
+    background-color: rgba(243, 100, 17, 0.425);
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+.nav-enlaces .active {
+    color: var(--accent-color);
+}
+
+.manual-container {
+    max-width: 1100px;
+    margin: 100px auto 40px auto; /* 100px para evitar que el contenido choque con la navbar fija */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título principal del manual */
+.main-title {
+    color: #388e3c; /* Verde institucional */
+    text-align: center;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+/* Texto de introducción */
+.intro-text {
+    text-align: justify;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Separador entre secciones */
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #bdbdbd, rgba(0, 0, 0, 0));
+    margin: 30px 0;
+}
+
+/* Título de cada sección de página */
+.section-title {
+    color: #4CAF50; /* Un tono de verde claro */
+    font-size: 1.8em;
+    border-left: 5px solid #388e3c; /* Línea decorativa verde oscuro */
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+/* Lista de información */
+.info-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.info-list li {
+    background-color: #f7f7f7; /* Fondo ligeramente gris para cada punto */
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    line-height: 1.5;
+}
+
+/* Título de cada punto de la lista */
+.list-title {
+    font-weight: bold;
+    color: #333;
+    display: block; /* Asegura que el título ocupe su propia línea si es necesario */
+}
+
+/* Estilo del botón de regreso */
+.button-center {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #388e3c; /* Color de fondo verde */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.back-button:hover {
+    background-color: #2e7d32; /* Tono de verde más oscuro al pasar el ratón */
+}
+
+/* ========================================= */
+/* MEDIA QUERY: TABLETAS Y MÓVILES (<= 768px) */
+/* ========================================= */
+@media (max-width: 768px) {
+    /* --- NAVEGACIÓN (NAV BAR) --- */
+    nav {
+        /* Permite que el logo y el botón de menú queden en la parte superior y los enlaces abajo */
+        flex-wrap: wrap; 
+        min-height: 70px; /* Asegura una altura mínima */
+        padding: 10px 15px;
+    }
+
+    /* Neutralizamos los márgenes fijos en porcentaje que rompen el diseño */
+    .logo-cemproza {
+        /* Se anula el margin-left: 20% que causa desbordamiento */
+        margin-left: 0;
+        font-size: 1.3rem; /* Reducimos el tamaño de fuente del título */
+    }
+    
+    .logo-cemproza-img {
+        width: 55px; /* Ajustamos el tamaño del logo */
+        height: 55px;
+    }
+    
+    /* Mostramos el botón hamburguesa */
+    .nav-toggle {
+        display: block;
+        order: 2; /* Lo empujamos a la derecha */
+        margin-left: auto; 
+    }
+    
+    .nav-enlaces {
+        /* Apilamos los enlaces */
+        flex-direction: column; 
+        width: 100%; /* Ocupa el 100% del ancho */
+        margin-right: 0; /* Anula el margin-right: 10% */
+        margin-left: 0; /* Aseguramos que el menú se centre */
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .nav-enlaces a {
+        font-size: 1rem;
+        padding: 10px 0;
+    }
+    
+    /* --- CONTENIDO DEL MANUAL --- */
+    .manual-container {
+        /* Ajustamos el margen superior para que no choque con la navbar fija */
+        margin-top: 80px; 
+        padding: 15px;
+    }
+    
+    .main-title {
+        font-size: 1.8em;
+    }
+    
+    .section-title {
+        font-size: 1.5em;
+    }
+}
+/* ========================================= */
+/* MEDIA QUERY: MÓVILES EXTREMOS (<= 400px, compatible con 340px) */
+/* ========================================= */
+@media (max-width: 400px) {
+    /* --- NAVEGACIÓN --- */
+    nav {
+        padding: 5px 10px;
+        min-height: 60px;
+    }
+    
+    .logo-cemproza {
+        font-size: 1.1rem; 
+    }
+    
+    .logo-cemproza-img {
+        width: 40px; 
+        height: 40px;
+    }
+    
+    /* --- CONTENIDO DEL MANUAL --- */
+    .manual-container {
+        padding: 10px;
+        margin-top: 70px;
+    }
+    
+    .main-title {
+        font-size: 1.5em; /* Reducción adicional del título */
+    }
+    
+    .intro-text, .info-list li {
+        font-size: 0.9em;
+    }
+    
+    .info-list li {
+        padding: 10px;
+    }
+    
+    .back-button {
+        padding: 8px 15px;
+        font-size: 1em;
+    }
+}
