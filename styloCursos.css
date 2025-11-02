@@ -409,12 +409,6 @@ footer p {
             font-size: 0.9rem;
         }
     }
-@media (min-width: 900px) {
-    .logo-cemproza-img {
-        padding-left: 20px;
-        padding-top: 20px;
-    }
-}
 
 /* Media Query: Diseño responsivo para dispositivos pequeños */
 @media (max-width: 700px) {
@@ -464,3 +458,4 @@ footer p {
 body {
     padding-top: 101px;
 }
+
