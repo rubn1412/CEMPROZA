@@ -1,13 +1,9 @@
-/* --- Variables de Color (basadas en el diseño de la imagen) --- */
 :root {
     --color-principal-verde:#00af9b; /* turquesa principal de los botones y links */
     --color-principal-naranja:rgb(243, 100, 17); /* Naranja del botón EXPLORE NOW */
     --texto-oscuro: #1F2937; /* Texto oscuro principal */
     --texto-secundario: #4B5563; /* Texto secundario y descripciones */
     --fondo-claro: #F9FAFB; /* Fondo de algunas secciones */
-    --header-height: 120px;
-    --logo-img-size: 80px; /* igual que Index.css */
-    --logo-font-size: 1.5rem;
     --nav-link-font: 1rem;
 }
 /* --- Reset y Estilos Base --- */
@@ -72,7 +68,7 @@ h2{
     height: 100%;
     margin: 0px;
     margin-top: 100px;
-    padding: 0px 0px 0px 75px;
+    padding: 0px 0px 0px 12px;
 
 }
 
@@ -100,8 +96,8 @@ nav{
 }
 
 .logo-cemproza-img {
-    width: var(--logo-img-size);
-    height: calc(var(--logo-img-size) + 0px);
+    width: 80px;
+    height: calc(80px + 0px);
     object-fit: contain;
 }
 .logo-cemproza h2{
@@ -581,7 +577,7 @@ footer p {
     /* cuando el checkbox esté marcado, mostrar el menú */
     .nav-toggle-checkbox:checked ~ .nav-enlaces {
         display: flex;
-        margin-top: -20px;
+        margin-top: -11px;
         flex-direction: column;
         margin-left: 46px;
         border-radius: 30px;
@@ -617,6 +613,6 @@ footer p {
 @media (max-width: 500px) {
     .imagen-hero{
         margin-top: -160px;
-        margin-left: -60px;
+        margin-left: -20px;
     }
 }
