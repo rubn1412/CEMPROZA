@@ -142,7 +142,7 @@ nav{
    padding:0;
 }
 .rejilla-mision-vision{
-   background-image: linear-gradient(324deg, #00af9b5d, rgba(243, 100, 17, 0.382));
+   background-color: #0000001e;
    padding: 16px;
    border-radius: 7px;
    box-shadow: 6px 0px 15px #000000a3;
@@ -154,20 +154,20 @@ nav{
 }
 .tarjeta-mision-vision{
    border-radius: 12px;
-   box-shadow: 6px 0px 15px #000000a3;
+   box-shadow: 0px 5px 15px #00af9baa;
    width: 450px;
    background-color: #fffefe43;
    padding: 20px;
    text-align: center;
 }
 #mision-vision aside{
-   background-image: linear-gradient(135deg, #00af9b5d , rgba(243, 100, 17, 0.382));
+   background-color: #0000001e;
    padding: 16px;
    border-radius: 7px;
    box-shadow: 6px 0px 15px #000000a3;
 }
 #mision-vision aside h2{
-   color: var(--texto-oscuro);
+   color: var(--color-principal-naranja);
    text-align: center;
    margin-top: 12px;
    font-size: 35px;
@@ -191,7 +191,7 @@ nav{
    padding:0;
 }
 .historia{
-   background-image: linear-gradient(324deg, #00af9b5d , rgba(243, 100, 17, 0.382));
+   background-color: #0000001e;
    padding: 35px;
    border-radius: 7px;
    box-shadow: 6px 0px 15px #000000a3;
@@ -204,7 +204,7 @@ nav{
 }
 .tarjeta-historia{
    border-radius: 12px;
-   box-shadow: 6px 0px 15px #000000a3;
+   box-shadow: 0px 5px 15px #00af9baa;
    width: 450px;
    background-color: #fffefe43;
    padding-bottom: 20px;
@@ -218,7 +218,7 @@ nav{
 }
 
 #historia h2{
-   color: var(--texto-oscuro);
+   color: var(--color-principal-naranja);
    text-align: center;
    margin-top: 12px;
    font-size: 35px;
@@ -232,7 +232,7 @@ nav{
    font-size: 22px;
 }
 .impacto{
-   background-image: linear-gradient(135deg, #00af9b5d , rgba(243, 100, 17, 0.382));
+   background-color: #0000001e;
    padding: 16px;
    border-radius: 7px;
    box-shadow: 6px 0px 15px #000000a3;
@@ -245,13 +245,13 @@ nav{
    padding:0;
 }
 .ejes{
-   background-image: linear-gradient(324deg, #00af9b5d , rgba(243, 100, 17, 0.382));
+   background-color: #0000001e;
    padding: 16px;
    border-radius: 7px;
    box-shadow: 6px 0px 15px #000000a3;
 }
 #ejes h2{
-   color: var(--texto-oscuro);
+   color: var(--color-principal-naranja);
    text-align: center;
    margin-top: 12px;
    font-size: 35px;
@@ -275,7 +275,7 @@ nav{
 #ejes .tarjeta{
    padding: 0px 0px 20px 0px;
    border-radius: 12px;
-   box-shadow: 6px 0px 15px #000000a3;
+   box-shadow: 0px 5px 15px #00af9baa;
    width: 250px;
    background-color: #fffefe43;
    padding-bottom: 20px;
@@ -304,13 +304,13 @@ nav{
    padding:0;
 }
 .beneficios{
-   background-image: linear-gradient(135deg, #00af9b5d , rgba(243, 100, 17, 0.382));
+   background-color: #0000001e;
    padding: 16px;
    border-radius: 7px;
    box-shadow: 6px 0px 15px #000000a3;
 }
 #beneficios h2{
-   color: var(--texto-oscuro);
+   color: var(--color-principal-naranja);
    text-align: center;
    margin-top: 12px;
    font-size: 35px;
