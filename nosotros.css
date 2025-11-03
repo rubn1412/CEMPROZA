@@ -134,12 +134,12 @@ nav{
    box-shadow:0 8px 24px rgba(11,22,18,0.06);
    font-style:italic
 }
-
 /* ---------------------------------------------------------------------------
    MISIÓN / VISIÓN / VALORES
    ------------------------------------------------------------------------ */
 #mision-vision{
-   padding:0;
+    padding:0;
+    background-image: linear-gradient(135deg, rgba(255,255,255,0.673) , rgb(243,100,17));
 }
 .rejilla-mision-vision{
    background-color: #0000001e;
@@ -153,7 +153,7 @@ nav{
 }
 .tarjeta-mision-vision{
    border-radius: 12px;
-   box-shadow: 0px 5px 15px #00af9baa;
+   box-shadow: 0px 5px 15px #0c0c0caa;
    width: 450px;
    background-color: #fffefe43;
    padding: 20px;
@@ -161,6 +161,7 @@ nav{
 }
 #mision-vision aside{
    background-color: #0000001e;
+   background-image: linear-gradient(135deg, #00af9b , rgba(255, 255, 255, 0.673));
    padding: 50px;
    border-radius: 7px;
    box-shadow: 6px 0px 15px #000000a3;
@@ -188,6 +189,7 @@ nav{
    ------------------------------------------------------------------------ */
 #historia{
    padding:0;
+   background-image: linear-gradient(135deg, rgba(255,255,255,0.673) , rgb(243,100,17));
 }
 .historia{
    background-color: #0000001e;
@@ -204,7 +206,7 @@ nav{
 }
 .tarjeta-historia{
    border-radius: 12px;
-   box-shadow: 0px 5px 15px #00af9baa;
+   box-shadow: 0px 5px 15px #000000aa;
    width: 450px;
    background-color: #fffefe43;
    padding-bottom: 20px;
@@ -233,6 +235,7 @@ nav{
 }
 .impacto{
    background-color: #0000001e;
+   background-image: linear-gradient(135deg, #00af9b , rgba(255, 255, 255, 0.673));
    padding: 50px;
    border-radius: 7px;
    box-shadow: 6px 0px 15px #000000a3;
@@ -243,6 +246,7 @@ nav{
    ------------------------------------------------------------------------ */
 #ejes{
    padding:0;
+    background-image: linear-gradient(135deg, rgba(255,255,255,0.673) , rgb(243,100,17));
 }
 .ejes{
    background-color: #0000001e;
@@ -278,7 +282,7 @@ nav{
 #ejes .tarjeta{
    padding: 0px 0px 20px 0px;
    border-radius: 12px;
-   box-shadow: 0px 5px 15px #00af9baa;
+   box-shadow: 0px 5px 15px #080808aa;
    width: 250px;
    background-color: #fffefe43;
    padding-bottom: 20px;
@@ -341,6 +345,7 @@ nav{
    ------------------------------------------------------------------------ */
 #beneficios{
    padding:0;
+   background-image: linear-gradient(135deg, #00af9b , rgba(255, 255, 255, 0.673));
 }
 .beneficios{
    background-color: #0000001e;
@@ -446,12 +451,3 @@ footer p{margin:5px 0}
       border-radius: 30px;
    }
 }
-
-
-
-
-
-
-
-
-
