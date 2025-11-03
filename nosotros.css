@@ -252,6 +252,41 @@ nav{
    box-shadow: 6px 0px 15px #000000a3;
    padding-bottom: 50px;
 }
+.img-ejes1{
+   height: 180px;
+   position: relative;
+   background-size: cover;
+   background-position: center;
+   background-image: url('imagenes/cosmetologia.jpg'); 
+}
+.img-ejes4{
+   height: 180px;
+   position: relative;
+   background-size: cover;
+   background-position: center;
+   background-image: url('imagenes/cocina.jpg'); 
+}
+.img-ejes5{
+   height: 180px;
+   position: relative;
+   background-size: cover;
+   background-position: center;
+   background-image: url('imagenes/marketing.jpeg'); 
+}
+.img-ejes2{
+   height: 180px;
+   position: relative;
+   background-size: cover;
+   background-position: center;
+   background-image: url('imagenes/refrigeracion-residencial2.jpg'); 
+}
+.img-ejes3{
+   height: 180px;
+   position: relative;
+   background-size: cover;
+   background-position: center;
+   background-image: url('imagenes/refrigeracion-automotriz.jpg'); 
+}
 #ejes h2{
    color: var(--color-principal-naranja);
    text-align: center;
@@ -409,6 +444,7 @@ footer p{margin:5px 0}
       border-radius: 30px;
    }
 }
+
 
 
 
