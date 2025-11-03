@@ -1,3 +1,36 @@
+:root {
+    --primary-color: #00b4ab; /* Verde agua */
+    --secondary-color: #000000; /* Negro */
+    --accent-color: #ff7b00; /* Naranja */
+    --light-color: #ffffff; /* Blanco */
+    --text-color: #333333; /* Gris oscuro */
+    --header-height: 101px; /* igual que Index.css */
+    --logo-img-size: 80px; /* igual que Index.css */
+    --logo-font-size: 1.5rem;
+    --nav-link-font: 1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+    font-family: "Roboto Condensed", sans-serif;
+    text-align: center;
+    text-shadow: 2px 3px 6px rgba(34, 0, 0, 0.537);
+}
+
+body {
+    font-family: var(--tahoma);
+    color: var(--text-color);
+    line-height: 1.6;
+    font-size: 20px;
+}
 nav{
     display: flex;
     justify-content: space-between;
