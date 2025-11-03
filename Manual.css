@@ -23,6 +23,7 @@ h1, h2, h3, h4 {
     font-family: "Roboto Condensed", sans-serif;
     text-align: center;
     text-shadow: 2px 3px 6px rgba(34, 0, 0, 0.537);
+    color: #00b4ab;
 }
 
 body {
@@ -196,49 +197,56 @@ hr {
 /* ========================================= */
 /* MEDIA QUERY: TABLETAS Y MÓVILES (<= 768px) */
 /* ========================================= */
-@media (max-width: 768px) {
-    /* --- NAVEGACIÓN (NAV BAR) --- */
-    nav {
-        /* Permite que el logo y el botón de menú queden en la parte superior y los enlaces abajo */
-        flex-wrap: wrap; 
-        min-height: 70px; /* Asegura una altura mínima */
-        padding: 10px 15px;
-    }
-
-    /* Neutralizamos los márgenes fijos en porcentaje que rompen el diseño */
-    .logo-cemproza {
-        /* Se anula el margin-left: 20% que causa desbordamiento */
-        margin-left: 0;
-        font-size: 1.3rem; /* Reducimos el tamaño de fuente del título */
-    }
-    
+@media (min-width: 900px) {
     .logo-cemproza-img {
-        width: 55px; /* Ajustamos el tamaño del logo */
-        height: 55px;
+        padding-left: 20px;
+        padding-top: 20px;
     }
-    
-    /* Mostramos el botón hamburguesa */
-    .nav-toggle {
-        display: block;
-        order: 2; /* Lo empujamos a la derecha */
-        margin-left: auto; 
+}
+
+/* Media Query: Diseño responsivo para dispositivos pequeños */
+@media (max-width: 700px) {
+    .logo-cemproza{
+        padding: 0px 0px 30px 0px;
+        margin-left: 0%;
     }
-    
-    .nav-enlaces {
-        /* Apilamos los enlaces */
-        flex-direction: column; 
-        width: 100%; /* Ocupa el 100% del ancho */
-        margin-right: 0; /* Anula el margin-right: 10% */
-        margin-left: 0; /* Aseguramos que el menú se centre */
-        text-align: center;
+    nav{
+        flex-wrap: wrap;
         gap: 10px;
+        padding: 20px 12px;
     }
     
     .nav-enlaces a {
-        font-size: 1rem;
-        padding: 10px 0;
+        font-size: 0.85em;
+        padding: 8px 10px;
     }
-    
+
+    /* mostrar label hamburguesa en tablets y móviles */
+    .nav-toggle {
+        padding: 10px 30px 40px 10px;
+        display: flex;
+        justify-content: end;
+    }
+
+    .nav-enlaces {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 0 20px 0;
+        background: linear-gradient(90deg, rgba(0,175,155,0.95), rgba(0,0,0,0.9));
+        box-shadow: 0px 30px 60px 0px #33305a94;
+    }
+
+    /* cuando el checkbox esté marcado, mostrar el menú */
+    .nav-toggle-checkbox:checked ~ .nav-enlaces {
+        display: flex;
+        margin-top: -20px;
+        flex-direction: column;
+        margin-left: 46px;
+        border-radius: 30px;
+    }
     /* --- CONTENIDO DEL MANUAL --- */
     .manual-container {
         /* Ajustamos el margen superior para que no choque con la navbar fija */
@@ -258,21 +266,6 @@ hr {
 /* MEDIA QUERY: MÓVILES EXTREMOS (<= 400px, compatible con 340px) */
 /* ========================================= */
 @media (max-width: 400px) {
-    /* --- NAVEGACIÓN --- */
-    nav {
-        padding: 5px 10px;
-        min-height: 60px;
-    }
-    
-    .logo-cemproza {
-        font-size: 1.1rem; 
-    }
-    
-    .logo-cemproza-img {
-        width: 40px; 
-        height: 40px;
-    }
-    
     /* --- CONTENIDO DEL MANUAL --- */
     .manual-container {
         padding: 10px;
