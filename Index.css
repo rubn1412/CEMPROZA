@@ -462,6 +462,32 @@ footer {
 footer p {
     margin: 5px 0;
 }
+.boton-flotante-manual {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(243, 100, 17, 0.348); 
+    color: white;
+    font-size: 28px;
+    padding: 10px 15px; 
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; 
+    z-index: 1000; 
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.boton-flotante-manual:hover {
+    background-color: rgba(164, 67, 11, 0.348); 
+    transform: scale(1.1); 
+}
+
+.boton-flotante-manual .icono-libro {
+    font-size: 24px;
+}
 /* --- Media Queries (Responsividad) --- */
 @media (max-width: 1100px) {
     .imagen-hero {
@@ -599,6 +625,7 @@ footer p {
         margin-left: -20px;
     }
 }
+
 
 
 
