@@ -270,7 +270,7 @@ nav{
    justify-content: center;
    gap: 30px;
    flex-wrap: wrap;
-   padding:10px 0;
+   padding: 15px 0;
 }
 
 #ejes .tarjeta{
@@ -407,4 +407,5 @@ footer p{margin:5px 0}
       border-radius: 30px;
    }
 }
+
 
