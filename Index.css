@@ -448,7 +448,7 @@ nav{
     flex: 1;
     min-height: 400px; 
     background-color: #F9FAFB; 
-    border-radius: 12px;
+    border-radius: 30px;
     background: url('imagenes/equipo.jpeg') no-repeat center / contain; 
 }
 footer {
@@ -599,5 +599,6 @@ footer p {
         margin-left: -20px;
     }
 }
+
 
 
