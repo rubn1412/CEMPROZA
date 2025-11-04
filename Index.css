@@ -386,7 +386,7 @@ nav{
     gap: 70px;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    text-align: left;
 }
 
 .contenido-beneficios h2 {
@@ -422,7 +422,7 @@ nav{
     gap: 70px;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    text-align: left;
 }
 
 .contenido-capacitacion h2 {
@@ -531,14 +531,14 @@ footer p {
     }
 
     .contenido-capacitacion {
-        text-align: center;
+        text-align: left;
         gap: 15px;
     }
     .contenido-capacitacion h2{
         margin-top: -50px;
     }
     .contenido-beneficios {
-        text-align: center;
+        text-align: left;
         gap: 15px;
     }
     .contenido-beneficios h2{
@@ -620,4 +620,5 @@ footer p {
         margin-left: -20px;
     }
 }
+
 
