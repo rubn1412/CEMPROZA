@@ -222,42 +222,42 @@ nav{
     position: relative;
     background-size: cover;
     background-position: center;
-    background-image: url('/imagenes/AsistenteFarmacia.jpeg'); 
+    background-image: url('imagenes/AsistenteFarmacia.jpeg'); 
 }
 .imagen-tarjeta2{
     height: 180px;
     position: relative;
     background-size: cover;
     background-position: center;
-    background-image: url('/imagenes/administrativo.jpeg'); 
+    background-image: url('imagenes/administrativo.jpeg'); 
 }
 .imagen-tarjeta3{
     height: 180px;
     position: relative;
     background-size: cover;
     background-position: center;
-    background-image: url('/imagenes/electroauto.avif'); 
+    background-image: url('imagenes/electroauto.avif'); 
 }
 .imagen-tarjeta4{
     height: 180px;
     position: relative;
     background-size: cover;
     background-position: center;
-    background-image: url('/imagenes/uñasbasico.jpg'); 
+    background-image: url('imagenes/uñasbasico.jpg'); 
 }
 .imagen-tarjeta5{
     height: 180px;
     position: relative;
     background-size: cover;
     background-position: center;
-    background-image: url('/imagenes/cejas.jpg'); 
+    background-image: url('imagenes/cejas.jpg'); 
 }
 .imagen-tarjeta6{
     height: 180px;
     position: relative;
     background-size: cover;
     background-position: center;
-    background-image: url('/imagenes/asistentedental.jpeg'); 
+    background-image: url('imagenes/asistentedental.jpeg'); 
 }
 
 .contenido-tarjeta {
@@ -326,35 +326,35 @@ nav{
     position: relative;
     background-size: cover;
     background-position: center;
-    background-image: url('/imagenes/cosmetologia.jpg'); 
+    background-image: url('imagenes/cosmetologia.jpg'); 
 }
 .imagenes-categorias2{
     height: 180px;
     position: relative;
     background-size: cover;
     background-position: center;
-    background-image: url('/imagenes/cocina.jpg'); 
+    background-image: url('imagenes/cocina.jpg'); 
 }
 .imagenes-categorias3{
     height: 180px;
     position: relative;
     background-size: cover;
     background-position: center;
-    background-image: url('/imagenes/marketing.jpeg'); 
+    background-image: url('imagenes/marketing.jpeg'); 
 }
 .imagenes-categorias4{
     height: 180px;
     position: relative;
     background-size: cover;
     background-position: center;
-    background-image: url('/imagenes/refrigeracion-residencial2.jpg'); 
+    background-image: url('imagenes/refrigeracion-residencial2.jpg'); 
 }
 .imagenes-categorias5{
     height: 180px;
     position: relative;
     background-size: cover;
     background-position: center;
-    background-image: url('/imagenes/refrigeracion-automotriz.jpg'); 
+    background-image: url('imagenes/refrigeracion-automotriz.jpg'); 
 }
 
 .contenido-categoria{
@@ -383,30 +383,21 @@ nav{
 
 .contenido-beneficios {
     flex: 1;
+    gap: 70px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 .contenido-beneficios h2 {
     font-size: 2.2rem;
-    margin-bottom: 100px;
+    margin-top: -85px;
 }
 
-.contenido-beneficios ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.contenido-beneficios li {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 20px;
-    color: var(--texto-secundario);
-}
-
-.contenido-beneficios li i {
-    color: var(--color-principal-verde);
+p{  
     font-size: 1.2rem;
-    margin-right: 15px;
-    margin-top: 3px;
+    color: var(--texto-secundario);
+    padding: 20px;
 }
 
 .imagen-tarjeta-beneficios {
@@ -414,7 +405,7 @@ nav{
     min-height: 400px;
     background-color: #858585;
     border-radius: 12px;
-    background: url('/imagenes/Certificado.png') no-repeat center / contain; 
+    background: url('imagenes/Certificado.png') no-repeat center / contain; 
 }
 
 /* --- Sección de Capacitación del Personal (Staff Training) --- */
@@ -449,7 +440,7 @@ nav{
     min-height: 400px; 
     background-color: #F9FAFB; 
     border-radius: 30px;
-    background: url('/imagenes/equipo.jpeg') no-repeat center / contain; 
+    background: url('imagenes/equipo.jpeg') no-repeat center / contain; 
 }
 footer {
     background-color: black;
@@ -548,6 +539,10 @@ footer p {
     }
     .contenido-beneficios {
         text-align: center;
+        gap: 15px;
+    }
+    .contenido-beneficios h2{
+        margin-top: -50px;
     }
 }
 @media (max-width: 872px) {
@@ -625,8 +620,3 @@ footer p {
         margin-left: -20px;
     }
 }
-
-
-
-
-
