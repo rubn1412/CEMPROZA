@@ -354,9 +354,9 @@
     .modal__description ul { padding-left: 18px; }
 
     .modal__sedes {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 14px;
+        display: flex; 
+        flex-wrap: wrap;
+        gap: 14px;
     }
     .modal__sedes a {
     display: block; text-decoration: none;
@@ -458,4 +458,5 @@ footer p {
 body {
     padding-top: 101px;
 }
+
 
