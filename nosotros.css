@@ -1,5 +1,5 @@
 :root{
-   --color-principal-verde:#00af9b; /* turquesa */
+   --color-principal-verde:#00af9b; 
    --color-principal-naranja:rgb(243,100,17);
    --texto-oscuro:#1F2937;
    --texto-secundario:#091531;
@@ -451,3 +451,4 @@ footer p{margin:5px 0}
       border-radius: 30px;
    }
 }
+
