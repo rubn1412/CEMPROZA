@@ -30,6 +30,7 @@ body {
     color: var(--text-color);
     line-height: 1.6;
     font-size: 20px;
+    margin-top: 95px;
 }
 nav{
     display: flex;
