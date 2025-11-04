@@ -118,7 +118,7 @@ nav{
 
 /* Título principal del manual */
 .main-title {
-    color: var(--naranja-color); /* Verde institucional */
+    color: var(--naranja-color); /* Naranja institucional */
     text-align: center;
     font-size: 2.2em;
     margin-bottom: 20px;
@@ -143,7 +143,7 @@ hr {
 
 /* Título de cada sección de página */
 .section-title {
-    color: var(--naranja-color);/* Un tono de verde claro */
+    color: var(--naranja-color);/* Naranja */
     font-size: 1.8em;
     padding-left: 10px;
     margin-bottom: 15px;
@@ -171,7 +171,7 @@ hr {
     display: block; /* Asegura que el título ocupe su propia línea si es necesario */
 }
 
-/* Estilo del botón de regreso */
+/* Estilo del botón de regreso (ejemplo, aunque no está en el HTML actual) */
 .button-center {
     text-align: center;
     margin-top: 40px;
@@ -194,15 +194,37 @@ hr {
 }
 
 /* ========================================= */
-/* MEDIA QUERY: TABLETAS Y MÓVILES (<= 768px) */
+/* NUEVOS ESTILOS PARA IMÁGENES DEL MANUAL */
 /* ========================================= */
+
+/* Contenedor de la imagen: ayuda a centrar y añadir margen */
+.section-image {
+    text-align: center; /* Centra la imagen dentro del contenedor */
+    margin: 20px 0 30px 0; /* Margen para separarla del texto */
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: var(--light-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Imagen responsiva */
+.responsive-manual-img {
+    /* Clave de la responsividad: la imagen nunca será más ancha que su contenedor */
+    max-width: 100%; 
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Elimina espacios extra debajo de la imagen */
+    margin: 0 auto; /* Asegura el centrado si el contenedor no usa text-align */
+    border-radius: 4px;
+}
+
+/* MEDIA QUERY: TABLETAS Y MÓVILES (<= 768px) */
 @media (min-width: 900px) {
     .logo-cemproza-img {
         padding-left: 20px;
         padding-top: 20px;
     }
 }
-
 /* Media Query: Diseño responsivo para dispositivos pequeños */
 @media (max-width: 700px) {
     .logo-cemproza{
@@ -237,7 +259,6 @@ hr {
         background: linear-gradient(90deg, rgba(0,175,155,0.95), rgba(0,0,0,0.9));
         box-shadow: 0px 30px 60px 0px #33305a94;
     }
-
     /* cuando el checkbox esté marcado, mostrar el menú */
     .nav-toggle-checkbox:checked ~ .nav-enlaces {
         display: flex;
@@ -248,7 +269,6 @@ hr {
     }
     /* --- CONTENIDO DEL MANUAL --- */
     .manual-container {
-        /* Ajustamos el margen superior para que no choque con la navbar fija */
         margin-top: 80px; 
         padding: 15px;
     }
@@ -260,10 +280,12 @@ hr {
     .section-title {
         font-size: 1.5em;
     }
+    
+    .section-image {
+        margin: 15px 0 20px 0;
+    }
 }
-/* ========================================= */
 /* MEDIA QUERY: MÓVILES EXTREMOS (<= 400px, compatible con 340px) */
-/* ========================================= */
 @media (max-width: 400px) {
     /* --- CONTENIDO DEL MANUAL --- */
     .manual-container {
