@@ -89,7 +89,7 @@ nav{
 }
 
 .nav-enlaces a {
-    color:#00ffe1;
+    color: white;
     font-weight: 500;
     /* tamaño fluido del texto de enlaces */
     font-size: clamp(0.85rem, 1.6vw, var(--nav-link-font));
