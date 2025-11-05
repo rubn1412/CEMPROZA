@@ -207,6 +207,34 @@ hr {
     background-color: var(--light-color);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
+footer {
+    background-color: black;
+    color: #00ffe1;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 5px 0;
+}
+.boton-flotante-manual {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(243, 100, 17, 0.348); 
+    color: white;
+    font-size: 28px;
+    padding: 10px 15px; 
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; 
+    z-index: 1000; 
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
 
 /* Imagen responsiva */
 .responsive-manual-img {
