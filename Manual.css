@@ -97,14 +97,14 @@ nav{
 }
 
 .nav-enlaces a:hover {
-    color: #00ffe1;
+    color: var(--naranja-color);
     background-color: rgba(243, 100, 17, 0.425);
     padding: 5px 8px;
     border-radius: 5px;
 }
 
 .nav-enlaces .active {
-    color: var(--naranja-color);
+    color: #00ffe1;
 }
 
 .manual-container {
