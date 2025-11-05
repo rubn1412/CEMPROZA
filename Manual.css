@@ -89,7 +89,7 @@ nav{
 }
 
 .nav-enlaces a {
-    color: white;
+    color: #cecece;
     font-weight: 500;
     /* tamaño fluido del texto de enlaces */
     font-size: clamp(0.85rem, 1.6vw, var(--nav-link-font));
@@ -97,7 +97,7 @@ nav{
 }
 
 .nav-enlaces a:hover {
-    color: var(--naranja-color);
+    color: #00ffe1;
     background-color: rgba(243, 100, 17, 0.425);
     padding: 5px 8px;
     border-radius: 5px;
