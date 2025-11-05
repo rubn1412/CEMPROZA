@@ -394,10 +394,20 @@ nav{
     margin-top: -85px;
 }
 
-.contenido-beneficios p{  
+.contenido-beneficios p, .contenido-beneficios ul {
     font-size: 1.2rem;
     color: var(--texto-secundario);
     padding: 20px;
+}
+
+.contenido-beneficios ul {
+    list-style: disc;
+    padding-left: 1.6rem;
+    margin-top: -10px;
+}
+
+.contenido-beneficios li {
+    margin-bottom: 8px;
 }
 
 .imagen-tarjeta-beneficios {
@@ -429,23 +439,17 @@ nav{
     font-size: 2.2rem;
     margin-top: -85px;
 }
-
-.contenido-beneficios p, .contenido-beneficios ul {
+.contenido-capacitacion ul {
     font-size: 1.2rem;
     color: var(--texto-secundario);
-    padding: 20px;
-}
-
-.contenido-beneficios ul {
-    list-style: disc;
     padding-left: 1.6rem;
     margin-top: -10px;
+    list-style: disc;
 }
 
-.contenido-beneficios li {
+.contenido-capacitacion li {
     margin-bottom: 8px;
 }
-
 
 .imagen-capacitacion {
     flex: 1;
@@ -632,6 +636,7 @@ footer p {
         margin-left: -20px;
     }
 }
+
 
 
 
