@@ -89,7 +89,7 @@ nav{
 }
 
 .nav-enlaces a {
-    color: #cecece;
+    color:#00ffe1;
     font-weight: 500;
     /* tamaño fluido del texto de enlaces */
     font-size: clamp(0.85rem, 1.6vw, var(--nav-link-font));
@@ -104,7 +104,7 @@ nav{
 }
 
 .nav-enlaces .active {
-    color: #00ffe1;
+    color: var(--naranja-color);
 }
 
 .manual-container {
