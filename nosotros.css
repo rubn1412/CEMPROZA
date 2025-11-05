@@ -134,7 +134,20 @@ nav{
    box-shadow:0 8px 24px rgba(11,22,18,0.06);
    font-style:italic
 }
-
+.hero-image-container {
+    /* Ajusta la altura del contenedor si es necesario, pero max-width ya debería manejarlo */
+    text-align: center; /* Centra la imagen */
+}
+/* La clave de la responsividad */
+.hero-responsive-img {
+    display: block;
+    width: 100%; /* Asegura que ocupe todo el ancho disponible en su columna */
+    max-width: 100%; /* La imagen nunca desbordará el contenedor */
+    height: auto; /* Mantiene la proporción para evitar distorsiones */
+    border-radius: 8px; /* Estilo opcional: bordes redondeados */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave opcional */
+}
 /* ---------------------------------------------------------------------------
    MISIÓN / VISIÓN / VALORES
    ------------------------------------------------------------------------ */
@@ -409,6 +422,9 @@ footer p{margin:5px 0}
 }
 
 @media (max-width:700px){
+   .hero-image-container {
+        margin-top: 25px; /* Añade espacio entre el texto superior y la imagen en móvil */
+    }
    .logo-cemproza{
       padding: 0px 0px 30px 0px;
       margin-left: 0%;
@@ -451,4 +467,5 @@ footer p{margin:5px 0}
       border-radius: 30px;
    }
 }
+
 
