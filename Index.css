@@ -394,16 +394,13 @@ nav{
     margin-top: -85px;
 }
 
-.contenido-beneficios p, .contenido-beneficios ul {
-    font-size: 1.2rem;
-    color: var(--texto-secundario);
-    padding: 20px;
-}
-
 .contenido-beneficios ul {
     list-style: disc;
     padding-left: 1.6rem;
     margin-top: -10px;
+    font-size: 1.2rem;
+    color: var(--texto-secundario);
+    padding: 20px;
 }
 
 .contenido-beneficios li {
@@ -636,6 +633,7 @@ footer p {
         margin-left: -20px;
     }
 }
+
 
 
 
