@@ -30,23 +30,17 @@
         padding: 20px;
     }
 
-    header {
-        color: white;
-        text-align: center;
-        border-radius: 0 0 10px 10px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
     nav{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        position: fixed; /* barra fija como en Index.css */
+        position: fixed; 
         top: 0;
         left: 0;
         background-image: linear-gradient(90deg, #00af9b , #000000);
-        z-index: 20; /* igual que Index.css */
+        z-index: 20; 
         width: 100%;
-        height: 101px; /* usar variable para consistencia */
+        height: 101px;
         padding: 0 1rem;
     }
 
@@ -458,5 +452,6 @@ footer p {
 body {
     padding-top: 101px;
 }
+
 
 
