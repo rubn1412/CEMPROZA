@@ -423,7 +423,7 @@ footer p {
 
     /* mostrar label hamburguesa en tablets y móviles */
     .nav-toggle {
-        padding: 10px 50px 40px 10px;
+        padding: 10px 52px 40px 10px;
         display: flex;
         justify-content: end;
     }
@@ -452,6 +452,7 @@ footer p {
 body {
     padding-top: 101px;
 }
+
 
 
 
