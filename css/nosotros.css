@@ -302,35 +302,35 @@ nav{
    position: relative;
    background-size: cover;
    background-position: center;
-   background-image: url('imagenes/cosmetologia.jpg'); 
+   background-image: url('../imagenes/cosmetologia.jpg'); 
 }
 .img-ejes4{
    height: 180px;
    position: relative;
    background-size: cover;
    background-position: center;
-   background-image: url('imagenes/cocina.jpg'); 
+   background-image: url('../imagenes/cocina.jpg'); 
 }
 .img-ejes5{
    height: 180px;
    position: relative;
    background-size: cover;
    background-position: center;
-   background-image: url('imagenes/marketing.jpeg'); 
+   background-image: url('../imagenes/marketing.jpeg'); 
 }
 .img-ejes2{
    height: 180px;
    position: relative;
    background-size: cover;
    background-position: center;
-   background-image: url('imagenes/refrigeracion-residencial2.jpg'); 
+   background-image: url('../imagenes/refrigeracion-residencial2.jpg'); 
 }
 .img-ejes3{
    height: 180px;
    position: relative;
    background-size: cover;
    background-position: center;
-   background-image: url('imagenes/refrigeracion-automotriz.jpg'); 
+   background-image: url('../imagenes/refrigeracion-automotriz.jpg'); 
 }
 #ejes .tarjeta h2{
    color: var(--texto-oscuro);
