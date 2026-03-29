@@ -150,24 +150,25 @@ nav{
 }
 
 /* ---------------------------------------------------------------------------
-   ESTILOS COMUNES DE SECCIONES Y TARJETAS LIGERAS
+   ESTILOS COMUNES DE SECCIONES Y TARJETAS SÓLIDAS
    ------------------------------------------------------------------------ */
 .section {
     padding: 60px 0;
 }
 
+/* Aplicando el fondo gris claro y el borde más grueso y oscuro como en Sedes */
 .tarjeta-mision-vision, .tarjeta-historia, #ejes .tarjeta {
-   background-color: #ffffff;
+   background-color: #f5f5f5; /* Gris claro sólido para el fondo, como en Sedes */
    border-radius: 12px;
-   border: 1px solid #e5e7eb; /* Borde gris muy suave */
-   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* Sombra ligera y elegante */
-   transition: transform 0.3s ease, box-shadow 0.3s ease;
+   border: 3px solid #cccccc; /* Borde gris claro más grueso y oscuro, como en Sedes */
+   box-shadow: none; /* Eliminar la sombra ligera para un aspecto más sólido y limpio */
+   transition: transform 0.3s ease, border-color 0.3s ease; /* Transición para el efecto de hover */
 }
 
 /* Efecto al pasar el mouse por las tarjetas */
 .tarjeta-mision-vision:hover, .tarjeta-historia:hover, #ejes .tarjeta:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.15);
+    border-color: #b3b3b3; /* Un gris ligeramente más oscuro para el hover, sutil */
 }
 
 h2 {
@@ -195,9 +196,10 @@ h2 {
 }
 #mision-vision aside{
    padding: 40px;
-   background-color: white;
+   /* Aplicando el mismo fondo y borde que las tarjetas */
+   background-color: #f5f5f5; /* Mismo fondo gris claro */
    border-radius: 12px;
-   border: 1px solid #e5e7eb;
+   border: 3px solid #cccccc; /* Mismo borde grueso */
 }
 
 /* Listas estilizadas (Checkmarks) */
@@ -254,9 +256,10 @@ h2 {
 }
 .impacto{
    padding: 40px;
-   background-color: white;
+   /* Aplicando el mismo fondo y borde que las tarjetas */
+   background-color: #f5f5f5; /* Mismo fondo gris claro */
    border-radius: 12px;
-   border: 1px solid #e5e7eb;
+   border: 3px solid #cccccc; /* Mismo borde grueso */
    text-align: center;
 }
 .impacto p {
@@ -284,6 +287,7 @@ h2 {
 #ejes .tarjeta{
    width: 260px;
    overflow: hidden; /* Para que la imagen respete los bordes redondos de la tarjeta */
+   /* La tarjeta heredará el estilo de borde y fondo definido en la sección común */
 }
 #ejes .tarjeta h3{
    color: var(--texto-oscuro);
@@ -302,6 +306,17 @@ h2 {
 .img-ejes5{ background-image: url('../imagenes/marketing.jpeg'); }
 .img-ejes2{ background-image: url('../imagenes/refrigeracion-residencial2.jpg'); }
 .img-ejes3{ background-image: url('../imagenes/refrigeracion-automotriz.jpg'); }
+
+/* ---------------------------------------------------------------------------
+   CTA / BENEFICIOS
+   ------------------------------------------------------------------------ */
+.beneficios{
+   padding: 40px;
+   /* Aplicando el mismo fondo y borde que las tarjetas */
+   background-color: #f5f5f5; /* Mismo fondo gris claro */
+   border-radius: 12px;
+   border: 3px solid #cccccc; /* Mismo borde grueso */
+}
 
 /* ---------------------------------------------------------------------------
    FOOTER
